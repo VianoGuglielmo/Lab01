@@ -43,7 +43,14 @@ public class FXMLController {
 
     @FXML
     void doCancella(ActionEvent event) {
-
+    	String c = txtParola.getText();
+    	String mod = "";
+    	elenco.cancel(c);
+    	for (String s: elenco.getElenco()) { //for dove passo stringa e itera e assume i vari valori
+    		mod+= s+"\n";   // mi cambia la stringa precedente + quella nuova
+    	}
+    	txtParola.clear();
+    	txtResult.setText(mod);
     }
 
     @FXML

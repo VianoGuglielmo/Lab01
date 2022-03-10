@@ -28,6 +28,11 @@ public class Parole {
 		parole.clear(); // svuota la lista
 	}
 	
+	public void cancel(String p) {
+		
+		parole.remove(p);
+	}
+	
 	public void cancella() {
 		
 		
